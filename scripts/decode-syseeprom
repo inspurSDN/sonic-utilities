@@ -130,7 +130,7 @@ def run(target, opts, args, support_eeprom_db):
     elif opts.serial:
         try:
             serial = target.serial_number_str(e)
-        except NotImplemented, e:
+        except NotImplementedError, e:
             print e
         else:
             print serial or "Undefined."
